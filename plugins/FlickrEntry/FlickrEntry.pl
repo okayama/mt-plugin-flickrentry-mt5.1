@@ -57,6 +57,19 @@ sub init_registry {
                 code => \&check_flickr_photo_url,
             },
         },
+        list_properties => {
+            entry => {
+                photo_thumbnail_url => {
+                    auto => 1,
+                    label => 'Thumbnail',
+                    order => 150,
+                    html => sub {
+                        my ( $prop, $obj, $app ) = @_;
+                        return '<img src="' . $obj->photo_thumbnail_url . '" />';
+                    },
+                },
+            },
+        },
     } );
 }
 
