@@ -65,7 +65,7 @@ sub init_registry {
                     order => 150,
                     html => sub {
                         my ( $prop, $obj, $app ) = @_;
-                        return '<img src="' . $obj->photo_thumbnail_url . '" />';
+                        return '<div style="text-align:center;"><img src="' . $obj->photo_thumbnail_url . '" /></div>';
                     },
                 },
             },
